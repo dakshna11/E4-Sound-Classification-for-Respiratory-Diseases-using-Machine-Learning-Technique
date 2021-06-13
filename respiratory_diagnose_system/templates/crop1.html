@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Diagnose system</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/css/autocomplete.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body bgcolor="#E6E6FA">
+
+
+<div class="container">
+    <div class="jumbotron" style="text-align:center">
+        <h1>Respiratory Diagnose System </h1>
+    </div>
+
+
+    <div class="row"> 
+        <div class ="col-sm-12 col-centered" style="padding-bottom: 1em">                 
+            <center>
+                <div class="btn-group center">
+                    
+                    <button id="auto_btn" type="button" class="btn btn-primary" onclick="getData()">Enter your details </button>
+                </div> 
+            </center>
+        </div> 
+    </div>
+
+
+    <form action="/crop_pre" method="POST" autocomplete="off">
+        
+	<form action="/crop_pre" method="post" enctype="multipart/form-data">
+
+        <div class="row" style="padding-bottom: 0.5em , margin-left  -30px" id="input-value">
+          <div class = "col-md-3">
+            <div class="input-group">
+                <span class="input-group-addon">Age</i></span>
+                <input  type="text" class="form-control" name="Age" placeholder="Age">
+              </div>
+            </div>
+    
+          <div class = "col-md-3">
+            <div class="input-group">
+                <span class="input-group-addon">Gender</i></span>
+                <input  type="text" class="form-control" name="Gender" placeholder="Gender">
+              </div>
+            </div>
+    
+          <div class ="col-md-3">
+            <div class="input-group">
+                <span class="input-group-addon">BMI</i></span>
+                <input  type="text" class="form-control" name="BMI" placeholder="BMI">
+              </div>
+          </div>
+		  
+		  
+		      
+	         
+			<div class ="col-md-3">
+            <div class="input-group">
+                <span class="input-group-addon">file</i></span>
+                <input  type="text" class="form-control" name="file" placeholder="file">
+              </div>
+			</div>
+<br><br><br>
+
+             <input type = "file" name = "file" />
+	 
+	 
+        <div class="col-md-12" class="">
+            <br>
+            <input type="submit" class="btn" value="Diagnose">
+        </div>
+    </form>
+	
+
+    
+
+    <div class="col-md-6">
+            <h3>Disease Prediction </h3>
+			
+			
+        {% if display  == True %}
+        <div class="table-responsive">
+            <table class="table table-hover">
+                
+                <tbody>
+                    <h1 style="color:red">{{predict}}</h1>
+        
+                    
+                    
+                </tbody>
+            </table>
+        </div>
+        {% endif%}
+    
+    </div>
+
+</div>
+
+
+<script src="../static/js/autocomplete1.js"></script>
+<script type="text/javascript">
+
+var npk = document.getElementById("input-value");
+var city = document.getElementById("city");
+city.style.display = "block"
+npk.style.display = "none"
+
+function getData(){
+    var npk = document.getElementById("input-value");
+    var city = document.getElementById("city");
+    // console.log(te.value);
+    npk.style.display = "block";
+    city.style.display = "none";
+    
+}
+function citywise(){
+    var npk = document.getElementById("input-value");
+    var city = document.getElementById("city");
+    // console.log(te.value);
+    npk.style.display = "none";
+    city.style.display = "block";
+    
+}
+</script>
+</body>
+</html>
