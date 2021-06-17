@@ -1,0 +1,74 @@
+                             #div1{
+width:100%;
+height:100px;
+background-color:#8fcfd1;
+border-bottom: 2px solid green;
+}
+
+#menu {
+
+height:70px;
+width:100%;
+padding-top:20px;
+background-color:#8fcfd1;
+#border-style:solid;
+border-bottom: 2px solid green;
+
+}
+
+#menu ul li
+{
+display:inline;
+margin-left:260px;
+color:yellow;
+}
+
+#menu ul li a
+{
+
+border-style:solid;
+border-width:2px;
+color:green;
+background-color:#f2b166;
+margin-top:120px;
+padding:10px;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.p1
+{
+font-size:30px;
+color:black;
+padding-top:25px;
+padding-left:10px;
+font-family:"HERCULANUM";
+}
+.p2
+{
+
+font-size:20px;
+color:black;
+padding-top:25px;
+padding-left:10px;
+}
+
+#div2
+{
+width:100%;
+height:500px;
+background-repeat: no-repeat;
+background-position: center;
+background-image: url("AgriLogo.png");
+background-size:600px 400px;
+opacity:0.5;
+}
+
+#center1
+{
+font-size:30px;
+color:black;
+font-family:"HERCULANUM";
+padding-top:30px;
+}
+
+

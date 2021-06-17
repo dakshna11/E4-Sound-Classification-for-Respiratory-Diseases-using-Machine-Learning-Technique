@@ -1,0 +1,25 @@
+#div1{
+width:100%;
+height:100px;
+background-color:#8fcfd1;
+border-bottom: 2px solid green;
+}
+
+.p1
+{
+font-size:30px;
+color:black;
+padding-top:25px;
+padding-left:10px;
+font-family:"HERCULANUM";
+}
+#div2
+{
+width:100%;
+height:500px;
+background-repeat: no-repeat;
+background-position: center;
+background-image: url("AgriLogo.png");
+background-size:600px 400px;
+opacity:0.2;
+}
